@@ -1,0 +1,114 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Unique transaction identifier (UPI/Card/NetBanking ref)"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Customer ID or mobile number"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount in Indian Rupees"
+    },
+    "currency": {
+      "type": "string",
+      "default": "INR",
+      "description": "Currency (INR for Indian Rupees)"
+    },
+    "merchant_name": {
+      "type": "string",
+      "description": "Merchant name or UPI ID"
+    },
+    "merchant_category": {
+      "type": "string",
+      "enum": [
+        "grocery",
+        "fuel",
+        "restaurant",
+        "ecommerce",
+        "recharge",
+        "utilities",
+        "pharmacy",
+        "education",
+        "travel",
+        "entertainment",
+        "healthcare",
+        "fashion",
+        "electronics",
+        "gold_jewelry",
+        "insurance",
+        "mutual_funds",
+        "other"
+      ],
+      "description": "Merchant category"
+    },
+    "location_state": {
+      "type": "string",
+      "description": "Indian state where transaction occurred"
+    },
+    "location_city": {
+      "type": "string",
+      "description": "City where transaction occurred"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "upi",
+        "credit_card",
+        "debit_card",
+        "netbanking",
+        "wallet",
+        "aadhaar_pay",
+        "bhim"
+      ],
+      "description": "Payment method used"
+    },
+    "upi_vpa": {
+      "type": "string",
+      "description": "UPI VPA if UPI transaction"
+    },
+    "bank_name": {
+      "type": "string",
+      "description": "Bank name (SBI, HDFC, ICICI, etc.)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "suspicious",
+        "blocked",
+        "failed"
+      ],
+      "default": "success",
+      "description": "Transaction status based on fraud analysis"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "AI-calculated risk score"
+    },
+    "fraud_indicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of detected fraud indicators"
+    },
+    "ai_explanation": {
+      "type": "string",
+      "description": "AI-generated explanation in simple language"
+    }
+  },
+  "required": [
+    "transaction_id",
+    "user_id",
+    "amount",
+    "merchant_name",
+    "payment_method"
+  ]
+}

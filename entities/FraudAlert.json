@@ -1,0 +1,57 @@
+{
+  "name": "FraudAlert",
+  "type": "object",
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Related transaction ID"
+    },
+    "alert_type": {
+      "type": "string",
+      "enum": [
+        "high_risk",
+        "medium_risk",
+        "unusual_pattern",
+        "geographic_anomaly",
+        "amount_anomaly",
+        "frequency_anomaly"
+      ],
+      "description": "Type of fraud alert"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "description": "Alert severity level"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the alert"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewed",
+        "resolved",
+        "false_positive"
+      ],
+      "default": "pending",
+      "description": "Alert status"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "description": "Email of the user who reviewed the alert"
+    }
+  },
+  "required": [
+    "transaction_id",
+    "alert_type",
+    "severity",
+    "description"
+  ]
+}
