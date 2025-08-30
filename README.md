@@ -1,4 +1,4 @@
-# Sentinel — AI-Powered Fraud Detection (India MVP)
+# SatarkAI: AI-Powered Fraud Detection (India MVP)
 
 A lightweight prototype for real-time transaction fraud detection built for India's digital payments ecosystem (UPI & cards). This repo contains a React frontend and a FastAPI backend with a simple ML model (IsolationForest) trained on synthetic Indian-style transaction data (examples use Bhopal, ₹INR).
 
