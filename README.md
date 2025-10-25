@@ -18,7 +18,7 @@ The long-term vision is to make every Indian digital transaction **safe, secure,
 - 💳 **Supports UPI, Cards, and Net Banking transactions**  
 - 📊 **Interactive dashboard** showing recent transactions & alerts  
 - 🔎 **Explainable AI**: human-readable reasons for flagged transactions  
-- 🛠️ **Model training script** with synthetic Indian-style transaction data  
+- 🛠️ **Model training script** with synthetic Indian style transaction data  
 - 🏦 **Customizable rules & thresholds** for fraud detection  
 
 ---
