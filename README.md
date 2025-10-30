@@ -78,7 +78,7 @@ This project is licensed under the **MIT License** — free to use, modify, and 
 
 ---
 
-## 🌍 Acknowledgments
+## Acknowledgments
 
 - **Inspiration:** India’s growing UPI ecosystem  
 - **Open-source libraries:** FastAPI, scikit-learn, React  
